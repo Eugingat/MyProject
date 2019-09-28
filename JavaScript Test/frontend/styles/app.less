@@ -1,0 +1,283 @@
+@import "reset";
+
+@grey: #bbbaba;
+@green: #38ac38;
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif !important;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header-container,
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  background: black;
+}
+
+
+.content-container {
+  flex: 1;
+  padding: 50px;
+}
+
+.page-title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.button {
+  background: black;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  transition: all .5s;
+
+  &__btnQuestion {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  &__btnResult {
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__starBtn {
+    margin: 0 10px 0;
+  }
+
+  &:hover {
+    border-radius: 0;
+  }
+
+  &:disabled {
+    background: @grey;
+    cursor: default;
+
+    &:hover {
+      border-radius: 20px;
+    }
+  }
+}
+
+.about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 830px;
+  text-align: center;
+
+  &__info {
+    font-size: 22px;
+    line-height: 34px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__btn-start {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}
+
+
+body {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  max-width: 960px;
+  z-index: 0;
+}
+
+
+.topBtn {
+  top: 30px;
+  width: 110px;
+  position: relative;
+  left: 185px;
+}
+
+.bottomBtn {
+  top: 60px;
+  width: 110px;
+  position: relative;
+  left: 185px;
+}
+
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: darkgrey;
+  opacity: 0.7;
+  z-index: 1;
+  transition-delay: 5s;
+  top: 0;
+  left: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 500px;
+  background-color: white;
+  z-index: 2;
+
+  &__text {
+    text-align: justify;
+    font-size: 22px;
+    margin: 30px 15px 0;
+  }
+}
+
+
+.close {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 20px;
+  margin: 0;
+  font-family: cursive;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.blockQuestion {
+  max-width: 960px;
+  margin: 0 auto;
+  border: solid 2px black;
+  height: 500px;
+}
+
+.blockAnswer {
+  max-width: 960px;
+  margin: 10px auto 0;
+  border: solid 2px black;
+  height: 170px;
+  position: relative;
+}
+
+.blokFloat {
+  float: left;
+}
+
+.footer__info {
+  color: @grey;
+}
+
+.styleQuestioin {
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translate(0, -50%);
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.divFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.img {
+  &__1 {
+    width: 680px;
+    height: 181px;
+    background-image: url("../img/imgQ1.png");
+    @media (max-width: 785px) {
+      width: 300px;
+    }
+  }
+
+  &__2 {
+    width: 672px;
+    height: 116px;
+    background-image: url("../img/imgQ6.png");
+    @media (max-width: 785px) {
+      width: 300px;
+    }
+  }
+
+  &__3 {
+    width: 670px;
+    height: 82px;
+    background-image: url("../img/imgQ7.png");
+    @media (max-width: 785px) {
+      width: 300px;
+    }
+  }
+
+  &__4 {
+    width: 670px;
+    height: 110px;
+    background-image: url("../img/imgQ9.png");
+    @media (max-width: 785px) {
+      width: 300px;
+    }
+  }
+}
+
+label {
+  font-size: 22px;
+}
+
+.blockAnimation {
+  width: 700px;
+  height: 50px;
+  border: solid 2px black;
+  position: relative;
+  top:30%;
+  left: 15%;
+  @media (max-width: 1000px) {
+    width: 500px;
+    left: 23%;
+  }
+  @media (max-width: 800px) {
+    width: 300px;
+    left: 23%;
+  }
+
+  &__myAnimation {
+    height: 46px;
+    width: 0;
+    background: #38ac38;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
